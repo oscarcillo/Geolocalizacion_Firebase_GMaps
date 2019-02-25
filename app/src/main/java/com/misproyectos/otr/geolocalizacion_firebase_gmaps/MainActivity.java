@@ -1,11 +1,13 @@
 package com.misproyectos.otr.geolocalizacion_firebase_gmaps;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -32,11 +34,9 @@ public class MainActivity extends AppCompatActivity {
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         dbReference = FirebaseDatabase.getInstance().getReference();
-
-        uploadLocationFirebase();
     }
 
-    private void uploadLocationFirebase() {
+    public void uploadLocationFirebase(View v) {
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,
@@ -62,5 +62,10 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    public void startMapsActivity(View v){
+        Intent i = new Intent(this, MapsActivity.class);
+        startActivity(i);
     }
 }

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "557397588171-76pa2d1m96rl9ku2eu0nojar9n542q01.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.misproyectos.otr.geolocalizacion_firebase_gmaps",
+            "certificate_hash": "661360c51abfdef4f39167dc54841f9fe1e5f9b8"
+          }
+        },
+        {
           "client_id": "557397588171-oeck1fe2mfcpgbsd42earmcggu6u0jmk.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
