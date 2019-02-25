@@ -8,12 +8,14 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_width="287dp"
         android:layout_height="wrap_content"
-        android:onClick="uploadLocationFirebase"
-        android:text="Localizar" />
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/button2"
